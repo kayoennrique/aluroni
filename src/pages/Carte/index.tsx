@@ -2,9 +2,13 @@ import styles from "./Carte.module.scss";
 import { ReactComponent as Logo } from "assets/logo.svg";
 import Search from "./SearchEngine";
 import { useState } from "react";
+import Filters from "./Filters";
+import Computer from "./Computer";
 
 export default function Carte() {
   const [search, setSearch] = useState("");
+  const [filter, setFilter] = useState<number | null>(null);
+  const [computer, setComputer] = useState("");
   return (
     <main>
       <nav className={styles.menu}>
@@ -21,8 +25,18 @@ export default function Carte() {
         </h3>
         <Search
           search={search}
-          setSearch={setSearch} 
+          setSearch={setSearch}
         />
+        <div className={styles.carte__filters}>
+          <Filters
+            filter={filter}
+            setFilter={setFilter}
+          />
+          <Computer
+            computer={computer}
+            setComputer={setComputer}
+          />
+        </div>
       </section>
     </main>
   )
