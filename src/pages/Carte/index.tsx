@@ -4,6 +4,7 @@ import Search from "./SearchEngine";
 import { useState } from "react";
 import Filters from "./Filters";
 import Computer from "./Computer";
+import Itens from './Itens';
 
 export default function Carte() {
   const [search, setSearch] = useState("");
@@ -37,6 +38,7 @@ export default function Carte() {
             setComputer={setComputer}
           />
         </div>
+        <Itens />
       </section>
     </main>
   )
