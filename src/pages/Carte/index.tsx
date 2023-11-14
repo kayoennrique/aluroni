@@ -38,7 +38,11 @@ export default function Carte() {
             setComputer={setComputer}
           />
         </div>
-        <Itens />
+        <Itens
+          search={search}
+          filter={filter}
+          computer={computer}
+        />
       </section>
     </main>
   )
