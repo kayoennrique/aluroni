@@ -2,6 +2,7 @@ import carte from 'data/carte.json';
 import Item from './Item';
 import styles from './Itens.module.scss';
 import { useState, useEffect } from "react";
+import { Carte } from 'types/Dish';
 
 interface Props {
     search: string,
@@ -23,7 +24,7 @@ export default function Itens(props: Props) {
         return true;
     }
 
-    function order(newList: typeof carte) {
+    function order(newList: Carte) {
         switch (computer) {
             case 'portion':
                 return newList.sort((a, b) => a.size > b.size ? 1 : -1);
