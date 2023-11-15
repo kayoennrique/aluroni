@@ -1,4 +1,4 @@
-import carte from './itens.json';
+import carte from 'data/carte.json';
 import Item from './Item';
 import styles from './Itens.module.scss';
 import { useState, useEffect } from "react";

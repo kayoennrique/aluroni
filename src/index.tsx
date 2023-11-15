@@ -2,11 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "normalize.css";
 import "./index.module.scss";
-import Carte from "./pages/Carte";
+import Router  from "./routes";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Carte />
+    <Router />
   </React.StrictMode>,
   document.getElementById('root')
 );

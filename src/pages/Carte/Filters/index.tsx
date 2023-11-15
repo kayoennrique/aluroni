@@ -6,7 +6,7 @@ import classNames from 'classnames';
 type IOption = typeof filters[0];
 
 interface Props {
-    filter: number | null,
+    filter: number | null;
     setFilter: React.Dispatch<React.SetStateAction<number | null>>
 }
 
@@ -31,5 +31,5 @@ export default function Filters({ filter, setFilter }: Props) {
                 </button>
             ))}
         </div>
-    )
+    );
 }
