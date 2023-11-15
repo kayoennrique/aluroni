@@ -4,6 +4,7 @@ import { useState } from "react";
 import Filters from "./Filters";
 import Computer from "./Computer";
 import Itens from './Itens';
+import stylesTheme from 'styles/Theme.module.scss';
 
 export default function Carte() {
   const [search, setSearch] = useState("");
@@ -11,7 +12,7 @@ export default function Carte() {
   const [computer, setComputer] = useState("");
   return (
     <section className={styles.carte}>
-      <h3 className={styles.carte__title}>
+      <h3 className={stylesTheme.title}>
         Cardápio
       </h3>
       <Search
