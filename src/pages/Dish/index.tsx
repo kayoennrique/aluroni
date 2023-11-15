@@ -1,16 +1,21 @@
 import styles from './Dish.module.scss';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, Routes, Route } from 'react-router-dom';
 import carte from 'data/carte.json';
 import TagsDish from 'components/TagsDish';
+import NotFound from 'pages/NotFound';
+import PageDefault from 'components/PageDefault';
 
-export default function Prato() {
+export default function Dish() {
   const { id } = useParams();
   const navigate = useNavigate();
   const dish = carte.find(item => item.id === Number(id));
   if(!dish) {
-    return '';
+    return <NotFound />;
   }
   return (
+    <Routes>
+      <Route path="*" element={<PageDefault />}>
+        <Route index element={
     <>
       <button className={styles.back} onClick={() => navigate(-1)}>
         {'< Voltar'}
@@ -29,6 +34,9 @@ export default function Prato() {
         </div>
         <TagsDish {...dish} />
       </div>
-    </>
+      </>
+        } />
+      </Route>
+    </Routes>
   );
 }

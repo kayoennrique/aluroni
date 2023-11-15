@@ -10,17 +10,17 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 export default function AppRouter() {
     return (
-        <main>
+        <main className='container'>
             <Router>
                 <Menu />
                 <Routes>
                     <Route path='/' element={<PageDefault />}>
                         <Route index element={<Home />} />
                         <Route path='carte' element={<Carte />} />
-                        <Route path='sobre' element={<About />} />
+                        <Route path='about' element={<About />} />
                     </Route>
+                    <Route path='dish/:id' element={<Dish />} />
                     <Route path='*' element={<NotFound />} />
-                    <Route path='prato/:id' element={<Dish />} />
                 </Routes>
                 <Footer />
             </Router>

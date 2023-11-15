@@ -10,8 +10,8 @@ export default function Home() {
     dishesRecommended = dishesRecommended.sort(() => 0.5 - Math.random()).splice(0, 3);
     const navigate = useNavigate();
 
-    function redirectToDetails(prato: Dish) {
-        navigate(`/prato/${prato.id}`, { state: { prato }, replace: true });
+    function redirectToDetails(dish: Dish) {
+        navigate(`/dish/${dish.id}`, { state: { dish }, replace: true });
       }
 
     return (

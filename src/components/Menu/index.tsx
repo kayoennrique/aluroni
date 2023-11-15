@@ -12,7 +12,7 @@ export default function Menu() {
     to: '/carte'
   }, {
     label: 'Sobre',
-    to: '/sobre'
+    to: '/about'
   }];
 
   return (
