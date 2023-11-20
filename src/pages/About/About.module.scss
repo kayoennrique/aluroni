@@ -1,30 +1,62 @@
+/* General styles */
 .aboutUs {
-    display: flex;
-    gap: 20px;
-    margin-bottom: 50px;
-    &__text {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      font-size: 1.5rem;
-      font-weight: bold;
-      text-align: justify;
-      > p {
-        font-family: 'Josefin Sans', sans-serif;
-      }
-    }
+  display: flex;
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+.aboutUs__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: justify;
+}
+
+.aboutUs__text > p {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.images__image {
+  width: 600px;
+}
+
+.images__image img {
+  border-radius: 5px;
+  width: 100%;
+}
+
+/* Mobile styles */
+@media (max-width: 767px) {
+  .aboutUs {
+    flex-direction: column;
+    gap: 30px;
   }
-  
-  .images {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-between;
-    &__image {
-      width: 600px;
-      img {
-        border-radius: 5px;
-        width: 100%;
-      }
-    }
+
+  .aboutUs__text {
+    font-size: 1.2rem;
   }
+
+  .images__image {
+    width: 100%;
+  }
+}
+
+/* Tablet styles */
+@media (min-width: 768px) and (max-width: 991px) {
+  .aboutUs__text {
+    font-size: 1.4rem;
+  }
+
+  .images__image {
+    width: 400px;
+  }
+}
