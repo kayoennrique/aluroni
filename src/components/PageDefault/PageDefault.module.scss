@@ -9,6 +9,18 @@
     display: flex;
     height: 300px;
     padding: 0px $padding-horizontal;
+    @media (max-width: 320px) {
+      .header {
+        height: 200px; /* Adjust the height to fit the smaller screen */
+        padding: 0 10px; /* Adjust the padding to fit the smaller screen */
+      }
+    
+      .header__text {
+        font-size: 3rem; /* Adjust the font size for smaller screens */
+        min-width: 300px; /* Adjust the minimum width for smaller screens */
+        width: 80%; /* Adjust the width to fit the smaller screen */
+      }
+    }
     @media (max-width: $desktop_xsm) {
       padding: 0px $padding-horizontal-mobile;
     }
