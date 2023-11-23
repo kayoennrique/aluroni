@@ -1,9 +1,11 @@
 import styles from './Dish.module.scss';
 import { useParams, useNavigate, Routes, Route } from 'react-router-dom';
 import carte from 'data/carte.json';
-import TagsDish from 'components/TagsDish';
-import NotFound from 'pages/NotFound';
-import PageDefault from 'components/PageDefault';
+import { lazy } from 'react';
+
+const TagsDish = lazy(() => import('components/TagsDish'));
+const NotFound = lazy(() => import('pages/NotFound'));
+const PageDefault = lazy(() => import('components/PageDefault'));
 
 export default function Dish() {
   const { id } = useParams();
