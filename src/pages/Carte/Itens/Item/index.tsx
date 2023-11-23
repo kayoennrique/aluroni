@@ -6,7 +6,6 @@ import { memo } from 'react';
 
 function Item(props: Dish) {
   const { id, title, description, photo } = props;
-  id === 5 && console.log(title);
   const navigate = useNavigate();
   return (
     <div className={styles.item} onClick={() => navigate(`/dish/${id}`)}>

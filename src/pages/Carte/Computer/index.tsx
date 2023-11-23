@@ -3,13 +3,14 @@ import options from "./options.json";
 import React, { useState } from "react";
 import classNames from "classnames";
 import { MdKeyboardArrowUp, MdKeyboardArrowDown } from 'react-icons/md';
+import { memo } from "react";
 
 interface Props { 
     computer: string,
     setComputer: React.Dispatch<React.SetStateAction<string>>
 }
 
-export default function Computer({
+function Computer({
     computer,
     setComputer
 }: Props) {
@@ -39,3 +40,5 @@ export default function Computer({
     </button>
   )
 }
+
+export default memo(Computer);
